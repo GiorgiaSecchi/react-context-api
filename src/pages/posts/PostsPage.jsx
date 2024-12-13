@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import PostList from "../../components/PostList";
 // import { Link } from "react-router-dom";
 
-export default function IndexPosts() {
+export default function PostsPage() {
   const [posts, setPosts] = useState([]);
   const apiUrl = import.meta.env.VITE_APP_URL;
-  console.log("apiUrl:" + apiUrl);
+  // console.log("apiUrl:" + apiUrl);
 
   useEffect(() => {
     fetchPosts();

@@ -13,8 +13,8 @@ import AboutPage from "./pages/AboutPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 // pages posts
-import IndexPosts from "./pages/posts/indexPosts";
-import ShowPosts from "./pages/posts/showPosts";
+import PostsPage from "./pages/posts/PostsPage";
+import ShowPosts from "./pages/posts/ShowPosts";
 
 function App() {
   return (
@@ -31,7 +31,7 @@ function App() {
           {/* Rotte con layout alternativo  */}
           <Route Component={AlternativeLayout}>
             {/* Risorse Posts */}
-            <Route path="/posts" Component={IndexPosts} />
+            <Route path="/posts" Component={PostsPage} />
             <Route path="/posts/:id" Component={ShowPosts} />
           </Route>
         </Routes>
