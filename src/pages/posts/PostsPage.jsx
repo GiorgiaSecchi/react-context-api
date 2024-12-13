@@ -7,34 +7,6 @@ export default function PostsPage() {
   const apiUrl = import.meta.env.VITE_APP_URL;
   // console.log("apiUrl:" + apiUrl);
 
-  // useEffect(() => {
-  //   fetchPosts();
-  // }, []);
-
-  // //   const fetchPosts = () => {
-  // //     fetch(apiUrl + "/posts")
-  // //       .then((res) => res.json())
-  // //       .then((data) => {
-  // //         console.log(data);
-  // //       });
-  // //   };
-
-  // const fetchPosts = () => {
-  //   fetch(apiUrl + "/posts")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       const postsData = data.map((post) => ({
-  //         id: post.id,
-  //         titolo: post.titolo,
-  //         immagine: post.immagine,
-  //         tags: post.tags,
-  //       }));
-
-  //       console.log(postsData);
-  //       setPosts(postsData);
-  //     });
-  // };
-
   return (
     <div className="container py-5">
       <h1>Posts</h1>
@@ -43,7 +15,7 @@ export default function PostsPage() {
 
       {posts.length > 0 ? (
         <div className="py-4">
-          <PostsList posts={posts} apiUrl={apiUrl} />
+          <PostsList />
         </div>
       ) : (
         <h5 className="mt-5">Non ci sono posts!</h5>
