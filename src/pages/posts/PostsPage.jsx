@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { usePostsContext } from "../contexts/PostsContext";
+import { usePostsContext } from "../../contexts/PostsContext";
 import PostsList from "../../components/PostsList";
 
 export default function PostsPage() {
