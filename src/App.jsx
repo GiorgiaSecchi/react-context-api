@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // contexts
-import { PostsContextProvider } from "./contexts/PostContext";
+import { PostsContextProvider } from "./contexts/PostsContext";
 
 // layout
 import DefaultLayout from "./layouts/DefaultLayout";

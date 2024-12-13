@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function PostList({ posts, apiUrl }) {
+export default function PostsList({ posts, apiUrl }) {
   return (
     <table className="table table-hover">
       <thead>
