@@ -19,7 +19,7 @@ export default function ShowPosts() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        // Aggiorna lo setPost con i dati ricevuti
+        // Aggiorna setPost con i dati ricevuti
         setPost(data);
       })
       .catch((error) => {
@@ -51,14 +51,3 @@ export default function ShowPosts() {
     </div>
   );
 }
-
-// (
-//     <Cards
-//       titolo={post.titolo}
-//       immagine={post.immagine}
-//       tags={post.tags}
-//       contenuto={post.contenuto}
-//     />
-//   ) : (
-//     <p>Caricamento in corso...</p>
-//   )
