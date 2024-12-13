@@ -1,5 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+// contexts
+import { PostsContextProvider } from "./contexts/PostContext";
+
 // layout
 import DefaultLayout from "./layouts/DefaultLayout";
 import AlternativeLayout from "./layouts/AlternativeLayout";
@@ -15,23 +18,25 @@ import ShowPosts from "./pages/posts/showPosts";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        {/* Rotte con layout classico */}
-        <Route Component={DefaultLayout}>
-          <Route path="/" Component={HomePage} />
-          <Route path="/about" Component={AboutPage} />
-          <Route path="*" Component={NotFoundPage} />
-        </Route>
+    <PostsContextProvider>
+      <BrowserRouter>
+        <Routes>
+          {/* Rotte con layout classico */}
+          <Route Component={DefaultLayout}>
+            <Route path="/" Component={HomePage} />
+            <Route path="/about" Component={AboutPage} />
+            <Route path="*" Component={NotFoundPage} />
+          </Route>
 
-        {/* Rotte con layout alternativo  */}
-        <Route Component={AlternativeLayout}>
-          {/* Risorse Posts */}
-          <Route path="/posts" Component={IndexPosts} />
-          <Route path="/posts/:id" Component={ShowPosts} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+          {/* Rotte con layout alternativo  */}
+          <Route Component={AlternativeLayout}>
+            {/* Risorse Posts */}
+            <Route path="/posts" Component={IndexPosts} />
+            <Route path="/posts/:id" Component={ShowPosts} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </PostsContextProvider>
   );
 }
 
